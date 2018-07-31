@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>die</title>
+   <meta author="Alan Salihi">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body onload="buildApp()" id="body">
+   <div id="container">
+      <h2 id="title">Play The Die!</h2>
+      <div id="content">
+         <p id="die">?</p>
+      </div>
+      <p id="feed" onclick="ctrReset()" onmouseover="ctrResetHintIn()" onmouseout="ctrResetHintOut()"></p>
+      <button id="btn_throw" onclick="myFunc()">▶</button>
+      <a id="btn" onclick="throwDie()">▶</a>
+   </div>
+   <script src="./app.js"></script>
+</body>
+</html>
