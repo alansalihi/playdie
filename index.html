@@ -9,14 +9,43 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body onload="buildApp()" id="body">
+   <audio id="gameAudio">
+         <source src="playdie_click.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+       </audio>
+
    <div id="container">
-      <h2 id="title">Play The Die!</h2>
-      <div id="content">
+      <div id="title">
+         <h2 id="title-text">Play The Die!</h2>
+         <div>
+            <p id="feed" onclick="ctrReset()" onmouseover="ctrResetHintIn()" onmouseout="ctrResetHintOut()"></p>
+            <p id="selectionInfo">Play Mode:</p>
+         </div>
+      </div>
+      
+      <div id="choices" class="playing">
+         <h3>Choose Play-Mode Below:</h3>
+         <div id="ctrl-btns">
+            <button class="btn-option" onclick="changeModeRange('classic')">Classic </button>
+            <button class="btn-option" onclick="changeModeRange('classicDouble')">Classic Double</button>
+            <button class="btn-option" onclick="changeModeRange('risky')">Risky </button>
+            <button class="btn-option" onclick="changeModeRange('riskyDouble')">Risky Double </button>
+            <button id="btn-soundFX" class="btn-soundFX-OFF" onclick="tgglAudio()">Turn ON Audio!</button>
+         </div>
+      </div>
+      
+      <button id="tggl-btn" class="btn-setting" onclick="tgglDiv()">Start!</button>
+
+      <div id="content" class="playing"
+      onclick="throwDie()">
          <p id="die">?</p>
       </div>
-      <p id="feed" onclick="ctrReset()" onmouseover="ctrResetHintIn()" onmouseout="ctrResetHintOut()"></p>
-      <button id="btn_throw" onclick="myFunc()">▶</button>
-      <a id="btn" onclick="throwDie()">▶</a>
+      
+
+
+      <!-- <div id="wow" class="there1">
+      
+      </div> -->
    </div>
    <script src="./app.js"></script>
 </body>
