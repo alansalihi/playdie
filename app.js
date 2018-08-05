@@ -8,7 +8,7 @@ var dieSides = 6;
 var dieFirstVal = 0;
 var dieLastVal = 6;
 var dieCurrentVal = 0;
-var modeRange = [0, 6];
+var modeRange = [1, 6];
 var modeRangeActive = 'classic';
 var soundFX = false;
 
@@ -111,12 +111,12 @@ function changeModeRange(expr) {
 
    switch (expr) {
      case 'classic':
-       modeRange = [0, 6];
+       modeRange = [1, 6];
        modeRangeActive = expr;
        break;
        
        case 'classicDouble':
-       modeRange = [0, 12];
+       modeRange = [1, 12];
        modeRangeActive = expr;
        break;
        
@@ -131,7 +131,7 @@ function changeModeRange(expr) {
        break;
        
        default:
-       modeRange = [0, 6];
+       modeRange = [1, 6];
        modeRangeActive = expr;
    }
    return updatePlaySetting(modeRangeActive);
